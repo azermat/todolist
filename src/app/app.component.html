@@ -1,0 +1,24 @@
+
+  <h1>Aufgaben</h1>
+  
+<app-table></app-table>
+
+  <div class="addItem">
+      Neues Todo: <input type="text" [(ngModel)]="todoName"> Beschreibung: <input type="text" [(ngModel)] = "todoDescription"> <input type="date" [(ngModel)]="todoDueDate"> <button (click)="addTodo()">Hinzufügen</button>
+  </div>
+
+  <div *ngFor="let item of todoListService.getTodos(false)">
+      <button (click)="todoListService.toggleDoneStateById(item.id)">Done</button> <button (click)="todoListService.deleteTodoById(item.id)">Löschen</button> {{ item.dueDate | date:'EE, dd.MM.' }} {{ item.itemName }}
+  </div>
+
+  <p>Offen : {{ todoListService.getTodos(false).length }}<br/>In Bearbeitung: <br/>Abgeschlossen: {{ todoListService.getTodos(true).length }} </p>
+
+
+
+  <div *ngFor="let item of todoListService.getTodos(false)">
+    Aufgabe: {{ item.itemName }}
+
+    Frist: {{ item.dueDate | date:'EE, dd.MM.' }}
+
+    Beschreibung: {{item.description}}
+</div>

@@ -1,0 +1,63 @@
+<div class="item">
+
+    <!-- <input [id]="item.itemName" type="checkbox" (change)="item.done = !item.done" [checked]="item.done"/> -->
+    
+  
+<!--     
+
+    <label class ="firstLabel" [for]="item.itemName">Aufgabe: {{item.itemName}}</label>
+    <label class = "secondlabel "[for]="item.description">Beschreibung: {{item.description}}</label> -->
+   
+    <!-- <div class="datepicker">
+
+      <mat-form-field appearance="legacy">
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Von">
+          <input matEndDate placeholder="Bis">
+        </mat-date-range-input>
+
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      
+      </mat-form-field> -->
+
+    </div> -->
+
+  
+    <!-- <div class="btn-wrapper" *ngIf="!editable">
+      <button class="btn" (click)="editable = !editable">Bearbeiten</button>
+      <button class="btn btn-warn" (click)="remove.emit()">Löschen</button>
+    </div>
+
+    <div class="btn-wrapper">
+      <button class="btn" (click)="editableDescription = !editableDescription">Beschreibung Hinzufügen/bearbeiten</button>
+  </div>
+  
+
+    <div *ngIf="editable">
+      <input class="sm-text-input" placeholder="Aufgabe" [value]="item.itemName" #editedItem (keyup.enter)="saveItem(editedItem.value)">
+
+      <div class="btn-wrapper">
+        <button class="btn" (click)="editable = !editable">Abbrechen</button>
+        <button class="btn btn-save" (click)="saveItem(editedItem.value)">Speichern</button>
+      </div>
+    </div>
+
+
+    <div *ngIf="editableDescription">
+      <input class="sm-text-input" placeholder="Beschreibung" [value]="item.description" #editedItem (keyup.enter)="saveDescription(editedItem.value)">
+
+      <div class="btn-wrapper">
+        <button class="btn" (click)="editableDescription = !editableDescription">Abbrechen</button>
+        <button class="btn btn-save" (click)="saveDescription(editedItem.value)">Speichern</button>
+      </div>
+    </div>
+
+    <div *ngIf="editableExpiry">
+      
+
+      <div class="btn-wrapper">
+        <button class="btn" (click)="editableExpiry = !editableExpiry">Abbrechen</button>
+        <!-- <button class="btn btn-save" (click)="saveDescription(editedItem.value)">Speichern</button> -->
+
+  
